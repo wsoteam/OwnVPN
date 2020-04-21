@@ -34,6 +34,14 @@
                 <action android:name="android.net.VpnService" />
             </intent-filter>
         </service>
+
+        <service
+            android:name="de.blinkt.openvpn.core.OpenVPNStatusService"
+            android:permission="android.permission.BIND_VPN_SERVICE">
+            <intent-filter>
+                <action android:name="android.net.OpenVPNStatusService" />
+            </intent-filter>
+        </service>
         <service
             android:name="de.blinkt.openvpn.api.ExternalOpenVPNService"
             tools:ignore="ExportedService">
